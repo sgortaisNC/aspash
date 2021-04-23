@@ -1,12 +1,11 @@
-
+@import 'variables';
+@import "bootstrap/bootstrap";
 
 /*
 ===================================================================
                           Defult CSS 
 ===================================================================
 */
-
-
 
 body{
 	margin: 0;
@@ -294,7 +293,7 @@ h1 {
 .actuali-right-fifty h1 {
 	font-weight: 400;
 	color: #364798;
-	padding: 20px 0 72px;
+	padding: 20px 0 68px;
 	font-size: 85px;
 	text-transform: capitalize;
 }
@@ -502,8 +501,8 @@ h1 {
 	font-size: 85px;
 	text-align: center;
 	position: absolute;
-	top: -50px;
-	right: 39%;
+	top: -135px;
+	right: 30%;
 	z-index: 111;
 	text-transform: capitalize;
 }
