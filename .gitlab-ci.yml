@@ -1,0 +1,14 @@
+deploy_production:
+  stage: deploy
+  environment: Production
+  only:
+    - master
+  script:
+    - pwd
+    - sshpass -V
+    - export SSHPASS=$USER_PASS
+    - sshpass -e ssh -o StrictHostKeyChecking=no $USER@172.16.5.26 'rm -rf /home/$USER/public_html/aspash/*'
+    - sshpass -e ssh -o StrictHostKeyChecking=no $USER@172.16.5.26 'mkdir -p /home/$USER/public_html/aspash/.git/objects'
+    - sshpass -e ssh -o StrictHostKeyChecking=no $USER@172.16.5.26 'chmod 770 -R /home/$USER/public_html/aspash/.git/objects'
+    - sshpass -e scp -o stricthostkeychecking=no -r ./* $USER@172.16.5.26:/home/$USER/public_html/aspash
+    - sshpass -e scp -o stricthostkeychecking=no -r ./.[!.]* $USER@172.16.5.26:/home/$USER/public_html/aspash
