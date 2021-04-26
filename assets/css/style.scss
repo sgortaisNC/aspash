@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  padding-top: 145px;
   font-family: 'Marianne', serif;
   /*font-family: 'Font Awesome 5 Free';*/
   /*font-family: 'Spectral';*/
@@ -78,7 +79,12 @@ h1 {
 ===================================================================
 */
 .header-area-section {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  z-index: 1;
 }
 
 .header-menu-area {
@@ -262,9 +268,10 @@ h1 {
 ===================================================================
 */
 .banner-area-section {
-  padding: 290px 0 212px 0;
+  padding: 265px 0 212px 0;
   position: relative;
   background: url(../images/banner.png) no-repeat scroll center center;
+  background-attachment: fixed;
 }
 
 .banner-area-section::after {
@@ -298,7 +305,7 @@ h1 {
     span {
       color: white; // for IE11
       -webkit-text-stroke: 1px #FFF;
-      color: transparent; // For other browsers
+      color: var(--transparent); // For other browsers
     }
   }
 }
