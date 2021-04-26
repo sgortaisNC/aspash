@@ -9937,12 +9937,14 @@ h3 {
                           Defult CSS 
 ===================================================================
 */
+*:focus-visible {
+  outline: none;
+}
+
 body {
   margin: 0;
   padding-top: 145px;
   font-family: "Marianne", serif;
-  /*font-family: 'Font Awesome 5 Free';*/
-  /*font-family: 'Spectral';*/
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -10013,7 +10015,7 @@ h1 {
   right: 0;
   left: 0;
   background: white;
-  z-index: 1;
+  z-index: 112;
 }
 
 .header-menu-area {
@@ -10192,8 +10194,7 @@ h1 {
 .banner-area-section {
   padding: 265px 0 212px 0;
   position: relative;
-  background: url(../images/banner.png) no-repeat scroll center center;
-  background-attachment: fixed;
+  background: url(../images/banner.png) no-repeat fixed center center;
 }
 
 .banner-area-section::after {
@@ -10360,7 +10361,7 @@ h1 {
 }
 
 .acuali-btn a:first-child {
-  border: 1px solid #D1CCCA;
+  border-color: #D1CCCA;
   border-right: inherit;
   padding: 10px 0 10px 10px;
 }
@@ -10375,6 +10376,10 @@ h1 {
   margin-top: 100px;
   max-width: 400px;
   width: 100%;
+  z-index: 10;
+}
+.actuali-subscribe:hover, .actuali-subscribe:focus, .actuali-subscribe:active {
+  outline: none;
 }
 
 .actuali-subscribe input {
