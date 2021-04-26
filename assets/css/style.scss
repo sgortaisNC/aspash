@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'animations';
 @import "bootstrap/bootstrap";
 
 /*
@@ -7,7 +8,7 @@
 ===================================================================
 */
 
-*:focus-visible{
+*:focus-visible {
   outline: none;
 }
 
@@ -63,10 +64,12 @@ h1 {
   font-weight: 900;
   border-right: inherit;
   padding: 10px 0 10px 10px;
+  @include animBouton($danger);
 }
 
 .aides-area-section .section-btn a:first-child {
   border-color: $light;
+  @include animBouton($light);
 }
 
 .section-btn a i {
@@ -293,6 +296,7 @@ h1 {
     font-size: 80px;
     font-weight: bold;
   }
+
   h3 {
     font-size: 50px;
     font-weight: 700;
@@ -341,15 +345,18 @@ h1 {
 
 .actuali-left-img {
   position: relative;
+
   img {
     width: 100%;
   }
+
   &::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: url('../images/path.png') no-repeat;
+    pointer-events: none;
     left: 15px;
     bottom: -70px;
   }
@@ -361,46 +368,43 @@ h1 {
   width: 100%;
   height: 100%;
   background: url('../images/path.png') no-repeat;
+  pointer-events: none;
   left: 15px;
   bottom: -210px;
 }
 
-.actuali-content-title-acl a h4 {
-  background-color: #364798;
-  color: #fff;
-  font-family: 'Spectral', serif;
-  font-weight: 300;
-  font-size: 21px;
-  display: inline-block;
-  padding: 5px 5px 3px 5px;
-  text-transform: uppercase;
+.actuali-content-title-acl {
+  //Date
+  h5 {
+    color: #A79D9A;
+    font-weight: 400;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+  //Tag
+  h4 {
+    background-color: #364798;
+    color: #fff;
+    font-family: 'Spectral', serif;
+    font-weight: 300;
+    font-size: 21px;
+    display: inline-block;
+    padding: 5px 5px 3px 5px;
+    text-transform: uppercase;
+  }
 }
-
-.actuali-des-date-acl h5 {
-  color: #A79D9A;
-  font-weight: 400;
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-
 
 .actuali-content {
   margin-top: -20px;
 }
 
-.actuali-content-title-acl {
+.actuali-content-title-acl,.actuali-content-title {
   -webkit-transform: translate(5px, -13px);
   -ms-transform: translate(5px, -13px);
   transform: translate(5px, -13px);
 }
 
-.actuali-content-title {
-  -webkit-transform: translate(5px, -13px);
-  -ms-transform: translate(5px, -13px);
-  transform: translate(5px, -13px);
-}
-
-.actuali-content-title a h4 {
+.actuali-content-title h4 {
   background-color: #364798;
   color: #fff;
   font-family: 'Spectral', serif;
@@ -411,20 +415,22 @@ h1 {
   text-transform: uppercase;
 }
 
-.actuali-des-date h5 {
-  color: #A79D9A;
-  font-weight: 400;
-  padding: 10px 0;
-  font-size: 16px;
+.actuali-des-date,.actuali-des-date-acl {
+  h5 {
+    color: #A79D9A;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 16px;
+  }
 }
 
-.actuali-des-date-acl p {
+.actuali-des-date-acl a {
   color: #364798;
   font-weight: 700;
   font-size: 20px;
 }
 
-.actuali-des-date p {
+.actuali-des-date a {
   color: #364798;
   font-weight: 400;
   font-size: 15px;
@@ -437,23 +443,35 @@ h1 {
 .acuali-btn {
   text-align: center;
   padding-top: 90px;
+  a {
+    color: #364798;
+    font-size: 14px;
+
+    &:first-child {
+      border-color: $light;
+      border-right: inherit;
+      padding: 10px 0 10px 10px;
+      position: relative;
+
+      @include animBouton($light);
+    }
+
+    &:last-child {
+      font-family: 'Font Awesome 5 Free', fantasy;
+      font-weight: 300;
+    }
+  }
 }
 
-.acuali-btn a {
-  color: #364798;
-  font-size: 14px;
-}
+.actuali-left-area,.single-actuali,.aides-left-area > div,.single-aides-content{
+  transition: all 0.2s;
+  transform: perspective(1px);
+  backface-visibility: hidden;
+  &:hover{
+    transform: scale(1.038) perspective(1px);
+    -webkit-font-smoothing: subpixel-antialiased;
 
-.acuali-btn a:first-child {
-  border-color: $light;
-  border-right: inherit;
-  padding: 10px 0 10px 10px;
-}
-
-.acuali-btn a:last-child {
-  font-family: 'Font Awesome 5 Free', fantasy;
-  font-weight: 300;
-
+  }
 }
 
 .actuali-subscribe {
@@ -462,7 +480,7 @@ h1 {
   max-width: 400px;
   width: 100%;
   z-index: 10;
-  @include hover-focus-active(){
+  @include hover-focus-active() {
     outline: none;
   }
 }
@@ -516,27 +534,25 @@ h1 {
   background: #EDE9EA;
   padding: 55px 0;
   position: relative;
-}
-
-.aides-area-section::after {
-  content: "";
-  position: absolute;
-  width: 51%;
-  height: 35px;
-  background: #fff;
-  top: 0;
-  right: 0;
-}
-
-.aides-area-section::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: 250px;
-  background: url('../images/shapl.png') no-repeat top;
-  left: -36%;
-  top: -16%;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 51%;
+    height: 35px;
+    background: #fff;
+    top: 0;
+    right: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 250px;
+    background: url('../images/shapl.png') no-repeat top;
+    left: -36%;
+    top: -16%;
+  }
 }
 
 .aides-head h1 {
@@ -551,7 +567,7 @@ h1 {
   text-transform: capitalize;
 }
 
-.aides-left-area {
+.aides-left-area > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,14 +590,14 @@ h1 {
 .aidexfix-desc p {
   color: #fff !important;
   font-weight: 700 !important;
-  font-size: 22px !important;
+  font-size: 23px !important;
   line-height: 1.2;
 }
 
 .aidexfix-desc-left p {
   color: #5F514F !important;
   font-weight: 700 !important;
-  font-size: 22px !important;
+  font-size: 23px !important;
 }
 
 .aides-left-area {
@@ -805,12 +821,14 @@ h1 {
 /*Footer content area start */
 .footer_content_area {
   margin-left: 30px;
+
   h2 {
     font-size: 22px;
     letter-spacing: -1px;
     position: relative;
     color: #fff;
     word-spacing: -1px;
+
     &::after {
       position: absolute;
       content: "";
@@ -831,8 +849,10 @@ h1 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+
   ul {
     padding-left: 10px;
+
     li {
       font-size: 14px;
       color: #fff;
@@ -865,12 +885,14 @@ h1 {
     border: 2px solid #FFFFFF;
     font-weight: 900;
     border-right: none;
+    @include animBouton();
   }
 }
 
 
 .footer-btn-rgt a {
   color: $danger;
+
   &:first-child {
     border: 2px solid $light;
     border-right: none;
@@ -879,6 +901,7 @@ h1 {
 
 .footer-right-icon {
   padding-right: 50px;
+
   a i {
     color: $danger;
     font-size: 20px;

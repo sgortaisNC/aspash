@@ -1,0 +1,27 @@
+@mixin animBouton($bg: #FFFFFF){
+  position: relative;
+  z-index: 1;
+  transition: all 400ms ease-out;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    top: -2px;
+    right: -30px;
+    background: $bg;
+    z-index: -1;
+    transition: all 400ms ease-out;
+    width: 0;
+  }
+
+  @include hover-focus-active {
+    @if $bg == #FFFFFF {
+      color: $danger;
+    }
+    padding-left: 20px;
+    &::after {
+      width: calc(100% + 32px);
+    }
+  }
+}
