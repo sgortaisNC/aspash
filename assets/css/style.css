@@ -10275,8 +10275,8 @@ h1 {
   padding-bottom: 23px;
   display: inline-block;
   background-image: url(../images/h3border.png);
-  background-position: bottom;
-  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-repeat: no-repeat;
 }
 .banner-heading h3 span {
   color: white;
