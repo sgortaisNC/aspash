@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     var typewriter = new Typewriter(titre, {
         loop: true,
-        delay: 75,
+        delay: 20,
         cursor: null,
     });
 
@@ -17,37 +17,42 @@ $(document).ready(function () {
 
     var typewriterB = new Typewriter(soustitre, {
         loop: true,
-        delay: 1,
+        delay: 0,
         cursor: null,
     });
 
     typewriter
         .typeString('Confiance')
-        .pauseFor(2250)
-        .deleteAll()
+        .pauseFor(5000)
+        .deleteAll(20)
+        .pauseFor(150)
         .typeString('Dispositifs')
-        .pauseFor(2250)
-        .deleteAll()
+        .pauseFor(5000)
+        .deleteAll(20)
+        .pauseFor(150)
         .typeString('Engagement')
-        .pauseFor(2250)
-        .deleteAll()
+        .pauseFor(5000)
+        .deleteAll(20)
+        .pauseFor(150)
         .typeString('Expertise')
-        .pauseFor(2250)
+        .pauseFor(4650)
+        .deleteAll(20)
+        .pauseFor(150)
         .start();
 
     typewriterB
         .typeString('Un savoir-faire reconnu en <span class="typo">ingénierie administrative et informatique</span>')
-        .pauseFor(2000)
-        .deleteAll(2)
+        .pauseFor(3900)
+        .deleteAll(1)
         .typeString('+ de 200 aides au service de <span class="typo">6 millions de bénéficiaires</span>')
-        .pauseFor(2000)
-        .deleteAll(2)
+        .pauseFor(3900)
+        .deleteAll(1)
         .typeString('Au service des <span class="typo">décideurs publics et de ses bénéficiaires</span>')
-        .pauseFor(2000)
-        .deleteAll(2)
+        .pauseFor(3900)
+        .deleteAll(1)
         .typeString('1er organisme de <span class="typo">paiement d’Europe</span>')
-        .pauseFor(2000)
-        .deleteAll(2)
+        .pauseFor(3900)
+        .deleteAll(1)
         .start();
 
     $('.mobile-bars').click(function () {
