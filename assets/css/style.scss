@@ -332,7 +332,7 @@ h1 {
     background-position: left bottom;
     background-repeat: no-repeat;
     //noinspection CssOverwrittenProperties
-    span {
+    span.typo {
       color: white; // for IE11
       -webkit-text-stroke: 1px #FFF;
       color: var(--transparent); // For other browsers

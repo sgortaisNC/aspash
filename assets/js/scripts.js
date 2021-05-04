@@ -1,4 +1,55 @@
+
+
+
 $(document).ready(function () {
+
+    var titre = document.getElementById('typewriter');
+
+    var typewriter = new Typewriter(titre, {
+        loop: true,
+        delay: 75,
+        cursor: null,
+    });
+
+
+
+    var soustitre = document.getElementById('typewriter-sous');
+
+    var typewriterB = new Typewriter(soustitre, {
+        loop: true,
+        delay: 1,
+        cursor: null,
+    });
+
+    typewriter
+        .typeString('Confiance')
+        .pauseFor(2250)
+        .deleteAll()
+        .typeString('Dispositifs')
+        .pauseFor(2250)
+        .deleteAll()
+        .typeString('Engagement')
+        .pauseFor(2250)
+        .deleteAll()
+        .typeString('Expertise')
+        .pauseFor(2250)
+        .start();
+
+    typewriterB
+        .typeString('Un savoir-faire reconnu en <span class="typo">ingénierie administrative et informatique</span>')
+        .pauseFor(2000)
+        .deleteAll(2)
+        .typeString('+ de 200 aides au service de <span class="typo">6 millions de bénéficiaires</span>')
+        .pauseFor(2000)
+        .deleteAll(2)
+        .typeString('Au service des <span class="typo">décideurs publics et de ses bénéficiaires</span>')
+        .pauseFor(2000)
+        .deleteAll(2)
+        .typeString('1er organisme de <span class="typo">paiement d’Europe</span>')
+        .pauseFor(2000)
+        .deleteAll(2)
+        .start();
+
     $('.mobile-bars').click(function () {
         $('.head-menu ul').slideToggle(1000);
     })

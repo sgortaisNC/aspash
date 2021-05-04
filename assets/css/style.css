@@ -10290,7 +10290,7 @@ h1 {
   background-position: left bottom;
   background-repeat: no-repeat;
 }
-.banner-heading h3 span {
+.banner-heading h3 span.typo {
   color: white;
   -webkit-text-stroke: 1px #FFF;
   color: var(--transparent);
