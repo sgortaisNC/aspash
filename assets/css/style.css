@@ -10073,6 +10073,7 @@ h1 {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header-logo {
@@ -10104,7 +10105,7 @@ h1 {
   align-items: center;
 }
 
-.head-menu ul li a {
+.head-menu > ul > li > a {
   color: #767676;
   font-weight: 400;
   font-size: 14px;
@@ -10213,8 +10214,10 @@ h1 {
 }
 
 .header-search-btn {
-  top: 90px;
-  right: 0;
+  right: 55px;
+  top: 30px;
+  bottom: 30px;
+  left: -1px;
   position: absolute !important;
   z-index: 3333;
   border: none;
@@ -10457,9 +10460,14 @@ h1 {
 .actuali-subscribe {
   position: relative;
   margin-top: 100px;
+  z-index: 10;
+}
+.actuali-subscribe:not(.header-search-btn) {
   max-width: 400px;
   width: 100%;
-  z-index: 10;
+}
+.actuali-subscribe:not(.header-search-btn) input[type=text] {
+  width: 479px;
 }
 .actuali-subscribe:hover, .actuali-subscribe:focus, .actuali-subscribe:active {
   outline: none;
@@ -10472,7 +10480,6 @@ h1 {
 .actuali-subscribe input[type=text] {
   border: 1px solid #D1CCCA;
   padding: 8px 126px 8px 16px;
-  width: 479px;
   height: 55px;
   max-width: 100%;
 }
@@ -10497,6 +10504,11 @@ h1 {
   color: rgba(95, 81, 79, 0.4) !important;
 }
 
+.actuali-subscribe.header-search-btn input[type=text] {
+  height: 85px;
+  width: 100%;
+}
+
 .actuali-subscribe input[type=submit] {
   position: absolute;
   background: transparent;
@@ -10505,6 +10517,10 @@ h1 {
   font-size: 17px;
   font-weight: 700;
   color: #D20042;
+}
+
+.actuali-subscribe.header-search-btn input[type=submit] {
+  top: 28px;
 }
 
 /*
