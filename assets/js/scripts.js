@@ -8,7 +8,7 @@ $(document).ready(function () {
     })
 
     $('.header-search-ful a i').click(function () {
-        $('.header-search-btn').slideToggle(500);
+        $('.header-search-btn').toggleClass('active');
     })
 
 

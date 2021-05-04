@@ -10205,10 +10205,6 @@ h1 {
   display: block;
 }
 
-.header-search-btn {
-  display: none;
-}
-
 .header-search {
   display: none;
 }
@@ -10217,10 +10213,15 @@ h1 {
   right: 55px;
   top: 30px;
   bottom: 30px;
-  left: -1px;
+  left: 100%;
   position: absolute !important;
   z-index: 3333;
   border: none;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.header-search-btn.active {
+  left: -1px;
 }
 
 .header-menu-area .actuali-subscribe {
@@ -10250,7 +10251,15 @@ h1 {
 .banner-area-section {
   padding: 265px 0 212px 0;
   position: relative;
-  background: url(../images/banner.png) no-repeat fixed center center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.banner-area-section #video-bg {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: -150px;
 }
 
 .banner-area-section::after {
@@ -10303,6 +10312,7 @@ h1 {
 */
 .actuali-area-section {
   padding: 82px 0 52px;
+  background: white;
 }
 
 .actuali-right-fifty h1 {
