@@ -615,20 +615,50 @@ h1 {
 .actuali-subscribe.header-search-btn input[type="text"] {
   height: 85px;
   width: 100%;
+  font-size: 55px;
+
+  &::-webkit-input-placeholder {
+    position: relative;
+    top: -12px;
+  }
+
+  &::-moz-placeholder {
+    position: relative;
+    top: -12px;
+  }
+
+  &:-ms-input-placeholder {
+    position: relative;
+    top: -12px;
+  }
+
+  &::-ms-input-placeholder, {
+    position: relative;
+    top: -12px;
+  }
+
+  &::placeholder {
+    position: relative;
+    top: -12px;
+  }
 }
 
 
-.actuali-subscribe input[type="submit"] {
+.actuali-subscribe button[type="submit"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   position: absolute;
   background: transparent;
   top: 13px;
   right: 9px;
+  border: none;
   font-size: 17px;
   font-weight: 700;
   color: $danger;
 }
 
-.actuali-subscribe.header-search-btn input[type="submit"] {
+.actuali-subscribe.header-search-btn button[type="submit"] {
   top: 28px;
 }
 
@@ -1240,6 +1270,9 @@ h1 {
 }
 
 @media all and (max-width: 991px) {
+  body{
+    padding-top: 140px;
+  }
   .megacontain {
     position: relative !important;
   }
@@ -1251,8 +1284,8 @@ h1 {
   }
 
   /*header-logo*/
-  .header-logo-img img:first-child {
-    height: auto;
+  .header-logo-img {
+    margin-right: 100px;
   }
   /*head-menu*/
   .head-menu > ul {
@@ -1262,7 +1295,7 @@ h1 {
     flex-direction: column;
     position: fixed;
     z-index: 111;
-    background: #fff;
+    background: $danger;
     width: 100vw;
     text-align: center;
     left: -110vw;
@@ -1273,6 +1306,11 @@ h1 {
 
     &.active {
       left: 0;
+      a{
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+      }
     }
 
     .remove-burger {
@@ -1293,9 +1331,8 @@ h1 {
   }
   .mobile-bars {
     display: block;
-    margin-right: 35px;
-
   }
+
   .mobile-bars a i {
     font-size: 25px;
     color: #D20042;
@@ -1377,9 +1414,6 @@ h1 {
   .header-search-ful {
     display: none;
   }
-  .header-search {
-    display: block;
-  }
   .bars-search {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1414,6 +1448,9 @@ h1 {
 }
 
 @media all and (max-width: 768px) {
+  .actuali-area-section{
+    padding-bottom: 0;
+  }
   /*banner*/
   .banner-heading h1 {
     font-size: 40px;
@@ -1422,7 +1459,7 @@ h1 {
     font-size: 30px;
   }
   .acuali-btn {
-    padding-top: 50px;
+    padding-top: 0;
   }
   .actuali-subscribe {
     left: 0;
@@ -1490,7 +1527,10 @@ h1 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-
+  .footer_content_area_sub{
+    flex-direction: column;
+    align-items: center;
+  }
   .footer_content_area h2::after {
     left: 70px;
   }
@@ -1510,8 +1550,26 @@ h1 {
     padding-right: 0;
   }
 
-  .actuali-subscribe:not(.header-search-btn){
+  .actuali-subscribe input[type=text]{
+    &::-webkit-input-placeholder {
+      font-size: 13px;
+    }
 
+    &::-moz-placeholder {
+      font-size: 13px;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 13px;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 13px;
+    }
+
+    &::placeholder {
+      font-size: 13px;
+    }
   }
 }
 
@@ -1535,8 +1593,13 @@ h1 {
 
   .aidesfix-img {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+  }
+  .aidesfix-content{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66%;
+    flex: 0 0 66%;
   }
 
   .mobile-aides {
@@ -1584,7 +1647,8 @@ h1 {
   }
   .footer_icon_area2 {
     margin-left: 0;
-    padding-left: 28px;
+    padding-left: 0;
+    margin-top: 25;
   }
 
   .aidexfix-desc p {
@@ -1596,8 +1660,12 @@ h1 {
 }
 
 @media all and (max-width: 450px) {
+  .aides-area-section::after{
+    display: none;
+  }
   .aides-head h1 {
-    right: 12%;
+    position: relative;
+    top: -40px;
   }
   .big-images::after {
     display: none;
@@ -1616,10 +1684,10 @@ h1 {
     font-size: 14px;
   }
   .aidexfix-desc p {
-    padding: 25px 35px 0 10px !important;
+    padding: 25px 0 !important;
   }
   .aides-title-icon h3 {
-    padding: 25px 60px 10px 30px;
+    padding: 25px 60px 10px 25px;
   }
   .aidexfix-desc p {
     font-size: 14px !important;

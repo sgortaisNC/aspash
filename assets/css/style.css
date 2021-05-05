@@ -11006,7 +11006,7 @@ h1 {
   padding: 10px 0 10px 10px;
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .section-btn a:first-child::after {
   content: "";
@@ -11017,7 +11017,7 @@ h1 {
   right: -31px;
   background: #D20042;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .section-btn a:first-child:hover, .section-btn a:first-child:focus, .section-btn a:first-child:active {
@@ -11031,7 +11031,7 @@ h1 {
   border-color: #D1CCCA;
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .aides-area-section .section-btn a:first-child::after {
   content: "";
@@ -11042,7 +11042,7 @@ h1 {
   right: -31px;
   background: #D1CCCA;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .aides-area-section .section-btn a:first-child:hover, .aides-area-section .section-btn a:first-child:focus, .aides-area-section .section-btn a:first-child:active {
@@ -11471,7 +11471,7 @@ h1 {
   position: relative;
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .acuali-btn a:first-child::after {
   content: "";
@@ -11482,7 +11482,7 @@ h1 {
   right: -31px;
   background: #D1CCCA;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .acuali-btn a:first-child:hover, .acuali-btn a:first-child:focus, .acuali-btn a:first-child:active {
@@ -11556,19 +11556,44 @@ h1 {
 .actuali-subscribe.header-search-btn input[type=text] {
   height: 85px;
   width: 100%;
+  font-size: 55px;
+}
+.actuali-subscribe.header-search-btn input[type=text]::-webkit-input-placeholder {
+  position: relative;
+  top: -12px;
+}
+.actuali-subscribe.header-search-btn input[type=text]::-moz-placeholder {
+  position: relative;
+  top: -12px;
+}
+.actuali-subscribe.header-search-btn input[type=text]:-ms-input-placeholder {
+  position: relative;
+  top: -12px;
+}
+.actuali-subscribe.header-search-btn input[type=text]::-ms-input-placeholder {
+  position: relative;
+  top: -12px;
+}
+.actuali-subscribe.header-search-btn input[type=text]::placeholder {
+  position: relative;
+  top: -12px;
 }
 
-.actuali-subscribe input[type=submit] {
+.actuali-subscribe button[type=submit] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   position: absolute;
   background: transparent;
   top: 13px;
   right: 9px;
+  border: none;
   font-size: 17px;
   font-weight: 700;
   color: #D20042;
 }
 
-.actuali-subscribe.header-search-btn input[type=submit] {
+.actuali-subscribe.header-search-btn button[type=submit] {
   top: 28px;
 }
 
@@ -11927,7 +11952,7 @@ h1 {
   border-right: none;
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .footer-btn a:first-child::after {
   content: "";
@@ -11938,7 +11963,7 @@ h1 {
   right: -31px;
   background: #FFFFFF;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .footer-btn a:first-child:hover, .footer-btn a:first-child:focus, .footer-btn a:first-child:active {
@@ -11957,7 +11982,7 @@ h1 {
   border-right: none;
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .footer-btn-rgt a:first-child::after {
   content: "";
@@ -11968,7 +11993,7 @@ h1 {
   right: -31px;
   background: #D1CCCA;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .footer-btn-rgt a:first-child:hover, .footer-btn-rgt a:first-child:focus, .footer-btn-rgt a:first-child:active {
@@ -12040,7 +12065,7 @@ h1 {
 .section-btn.footer-btn-english a:first-child {
   position: relative;
   z-index: 1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
 }
 .section-btn.footer-btn-english a:first-child::after {
   content: "";
@@ -12051,7 +12076,7 @@ h1 {
   right: -31px;
   background: transparent;
   z-index: -1;
-  transition: all 400ms ease-out;
+  transition: all 200ms ease-out;
   width: 0;
 }
 .section-btn.footer-btn-english a:first-child:hover, .section-btn.footer-btn-english a:first-child:focus, .section-btn.footer-btn-english a:first-child:active {
@@ -12209,6 +12234,10 @@ h1 {
   }
 }
 @media all and (max-width: 991px) {
+  body {
+    padding-top: 140px;
+  }
+
   .megacontain {
     position: relative !important;
   }
@@ -12222,8 +12251,8 @@ h1 {
   }
 
   /*header-logo*/
-  .header-logo-img img:first-child {
-    height: auto;
+  .header-logo-img {
+    margin-right: 100px;
   }
 
   /*head-menu*/
@@ -12234,7 +12263,7 @@ h1 {
     flex-direction: column;
     position: fixed;
     z-index: 111;
-    background: #fff;
+    background: #D20042;
     width: 100vw;
     text-align: center;
     left: -110vw;
@@ -12245,6 +12274,11 @@ h1 {
   }
   .head-menu > ul.active {
     left: 0;
+  }
+  .head-menu > ul.active a {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
   }
   .head-menu > ul .remove-burger {
     display: block;
@@ -12267,7 +12301,6 @@ h1 {
 
   .mobile-bars {
     display: block;
-    margin-right: 35px;
   }
 
   .mobile-bars a i {
@@ -12363,10 +12396,6 @@ h1 {
     display: none;
   }
 
-  .header-search {
-    display: block;
-  }
-
   .bars-search {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12406,6 +12435,10 @@ h1 {
   }
 }
 @media all and (max-width: 768px) {
+  .actuali-area-section {
+    padding-bottom: 0;
+  }
+
   /*banner*/
   .banner-heading h1 {
     font-size: 40px;
@@ -12416,7 +12449,7 @@ h1 {
   }
 
   .acuali-btn {
-    padding-top: 50px;
+    padding-top: 0;
   }
 
   .actuali-subscribe {
@@ -12500,6 +12533,11 @@ h1 {
     flex-wrap: wrap;
   }
 
+  .footer_content_area_sub {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .footer_content_area h2::after {
     left: 70px;
   }
@@ -12522,6 +12560,22 @@ h1 {
 
   .footer-btn {
     padding-right: 0;
+  }
+
+  .actuali-subscribe input[type=text]::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  .actuali-subscribe input[type=text]::-moz-placeholder {
+    font-size: 13px;
+  }
+  .actuali-subscribe input[type=text]:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .actuali-subscribe input[type=text]::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .actuali-subscribe input[type=text]::placeholder {
+    font-size: 13px;
   }
 }
 @media all and (max-width: 576px) {
@@ -12547,8 +12601,14 @@ h1 {
 
   .aidesfix-img {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+  }
+
+  .aidesfix-content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66%;
+    flex: 0 0 66%;
   }
 
   .mobile-aides {
@@ -12602,7 +12662,8 @@ h1 {
 
   .footer_icon_area2 {
     margin-left: 0;
-    padding-left: 28px;
+    padding-left: 0;
+    margin-top: 25;
   }
 
   .aidexfix-desc p {
@@ -12613,8 +12674,13 @@ h1 {
   }
 }
 @media all and (max-width: 450px) {
+  .aides-area-section::after {
+    display: none;
+  }
+
   .aides-head h1 {
-    right: 12%;
+    position: relative;
+    top: -40px;
   }
 
   .big-images::after {
@@ -12639,11 +12705,11 @@ h1 {
   }
 
   .aidexfix-desc p {
-    padding: 25px 35px 0 10px !important;
+    padding: 25px 0 !important;
   }
 
   .aides-title-icon h3 {
-    padding: 25px 60px 10px 30px;
+    padding: 25px 60px 10px 25px;
   }
 
   .aidexfix-desc p {
