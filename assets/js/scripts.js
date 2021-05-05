@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 
     var titre = document.getElementById('typewriter');
@@ -10,8 +7,6 @@ $(document).ready(function () {
         delay: 20,
         cursor: null,
     });
-
-
 
     var soustitre = document.getElementById('typewriter-sous');
 
@@ -55,8 +50,9 @@ $(document).ready(function () {
         .deleteAll(1)
         .start();
 
-    $('.mobile-bars').click(function () {
-        $('.head-menu ul').slideToggle(1000);
+    $('.mobile-bars,.remove-burger').click(function () {
+        $('.head-menu ul').toggleClass('active');
+        $('body').toggleClass('stuck');
     })
 
     $('.header-search a i').click(function () {
@@ -67,8 +63,9 @@ $(document).ready(function () {
         $('.header-search-btn').toggleClass('active');
     })
 
-
-    AOS.init({duration: 1000});
+    if (window.outerWidth > 993) {
+        AOS.init({duration: 1000});
+    }
 
 
     !(function (n, i, e, a) {
