@@ -407,14 +407,16 @@ h1 {
   background: white;
 }
 
-.actuali-right-fifty h1 {
-  font-weight: 400;
-  color: #364798;
-  padding: 20px 0;
-  margin-bottom: 50px;
-  background: white;
-  font-size: 85px;
-  text-transform: capitalize;
+.actuali-right-fifty,.actuali-left {
+  h1 {
+    font-weight: 400;
+    color: #364798;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    background: white;
+    font-size: 85px;
+    text-transform: capitalize;
+  }
 }
 
 .actuali-left-img {
@@ -1186,6 +1188,13 @@ h1 {
   font-size: 12px;
 }
 
+@media all and (max-width: 1340px) {
+  .aides-head h1{
+    right: 25%;
+  }
+
+}
+
 @media all and (max-width: 1200px) {
 
   /*actuali*/
@@ -1213,9 +1222,6 @@ h1 {
   }
   .head-menu > ul::after {
     display: none;
-  }
-  .aides-head h1 {
-    right: 35%;
   }
   .footer-right-icon {
     padding-right: 0;
@@ -1302,6 +1308,9 @@ h1 {
     justify-content: flex-end;
   }
 
+  .banner-area-section{
+    display: none;
+  }
   /*overly*/
   .overlay {
     z-index: 2222;
@@ -1315,6 +1324,12 @@ h1 {
 
 
   /*actuali*/
+  .actuali-area-section{
+    padding-top: 0;
+  }
+  .actuali-left-area{
+    margin-bottom: 30px;
+  }
   .single-actuali {
     padding-bottom: 50px;
   }
@@ -1327,7 +1342,7 @@ h1 {
     margin-top: 30px;
   }
   .aides-head h1 {
-    right: 33%;
+    right: 10%;
   }
 
   /*aides-left-area*/
@@ -1423,6 +1438,10 @@ h1 {
   .actuali-left-img::after {
     bottom: -310px;
   }
+  .actuali-left h1{
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
   .big-images::after {
     bottom: -197px !important;
   }
@@ -1478,6 +1497,9 @@ h1 {
   .header-search-btn {
     top: 49px;
   }
+  .actuali-subscribe:not(.header-search-btn){
+    margin: 60px auto;
+  }
   .aides-area-section::before {
     top: -3%;
   }
@@ -1488,6 +1510,9 @@ h1 {
     padding-right: 0;
   }
 
+  .actuali-subscribe:not(.header-search-btn){
+
+  }
 }
 
 @media all and (max-width: 576px) {
